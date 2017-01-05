@@ -3,8 +3,6 @@ package com.laundary.pick.main;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
-
-import com.example.saddam.laundary.R;
 import com.laundary.pick.cart.Clothe;
 import com.laundary.pick.cart.HouseClothe;
 import com.laundary.pick.cart.MensClothe;
@@ -45,6 +43,7 @@ HouseClothe houseClothe;
     }
     WomensClothe ins1=WomensClothe.getInstance();
     size=ins1.size();
+        message=message+"\n";
     for(int i=0;i<size;i++){
         Clothe clothe=ins1.getClotheAtInd(i);
         message=message+clothe.getCID()+clothe.getName()+clothe.getCount()+clothe.getPrice();
